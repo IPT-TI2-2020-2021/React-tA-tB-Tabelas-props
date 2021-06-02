@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+// App.js
+// Esta classe será o ponto de partida da nossa aplicação
+//************************************************************* */ 
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// importar da pasta 'node_modules' a package do React 
+import React from 'react';
+// importar o componente 'Tabela'
+import Tabela from './Tabela'
+
+// cria o 'componente' App
+// neste caso é criada uma FUNÇÃO
+class App extends React.Component {
+  // todas as classes terão, obrigatoriamente,
+  // um método chamado 'render'
+  render() {
+    // todo o componente tem obrigatoriamente de 'devolver' alguma coisa
+    return (
+      <div className="container"> {/* e apenas consegue devolver um ÚNICO objeto */}
+        <h1>Lista de <i>tabelas</i> obtidas de diversas formas...</h1>
+
+        <h2>Tabela puramente 'hard coded'</h2>
+        <Tabela />
+
+
+      </div>
+    );
+  }
 }
 
+// um componente só é acessível se for 'exportado'
 export default App;
