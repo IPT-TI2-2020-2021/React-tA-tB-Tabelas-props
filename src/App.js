@@ -6,6 +6,8 @@
 import React from 'react';
 // importar o componente 'Tabela'
 import Tabela from './Tabela'
+// importar o componente 'Tabela2'
+import Tabela2 from './Tabela2'
 
 // cria o 'componente' App
 // neste caso é criada uma FUNÇÃO
@@ -20,8 +22,10 @@ class App extends React.Component {
 
         <h2>Tabela puramente 'hard coded'</h2>
         <Tabela />
-
-
+        <br />
+        {/* junção de dois componentes dentro de um outro */}
+        <h2>Tabela com componentes simples</h2>
+        <Tabela2 />
       </div>
     );
   }
